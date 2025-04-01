@@ -3,25 +3,23 @@
 
 #include <string>
 
-// Here we directly define the class inside the header since it is only consitued of getters.
-
 class Article {
 public:
-    // Constructor
-    Article(int id, const std::string &title, const std::string &author, const std::string &text)
-        : id_(id), title_(title), author_(author), text_(text) {}
+    // Constructor: 
+    Article(int articleId, const std::string &articleTitle, const std::string &articleAuthor, const std::string &articleText)
+        : articleId_(articleId), articleTitle_(articleTitle), articleAuthor_(articleAuthor), articleText_(articleText) {}
 
     // Getters
-    int getId() const { return id_; }
-    const std::string& getTitle() const { return title_; }
-    const std::string& getAuthor() const { return author_; }
-    const std::string& getText() const { return text_; }
+    int getArticleId() const { return articleId_; }
+    const std::string& getArticleTitle() const { return articleTitle_; }
+    const std::string& getArticleAuthor() const { return articleAuthor_; }
+    const std::string& getArticleText() const { return articleText_; }
 
 private:
-    int id_;                // ID of the article
-    std::string title_;     // Title of the article
-    std::string author_;    // Author of the article
-    std::string text_;      // The content of the article
+    int articleId_;                // Unique ID for the article.
+    std::string articleTitle_;     // Title of the article.
+    std::string articleAuthor_;    // Author of the article.
+    std::string articleText_;      // Content of the article.
 };
 
-#endif
+#endif // ARTICLE_H
