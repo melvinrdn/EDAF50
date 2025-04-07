@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++ -O2 -g -DNDEBUG -Wall -Wextra -pedantic -Wshadow -Wpointer-arith -Wcast-align -Wno-switch -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/news_server.dir/news_server.cc.o -o news_server  ../libclientserver.a

@@ -7,8 +7,11 @@
 
 class Newsgroup {
 public:
-    // Constructor
+//test porpose
+    Newsgroup() = default;
+// Constructor
     Newsgroup(int newsgroupId, const std::string &newsgroupTitle);
+
 
     // Getters
     int getNewsgroupId() const;
