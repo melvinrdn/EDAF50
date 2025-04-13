@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.14)
 target_sources(clientserver
-    PRIVATE
-        connection.cc
-        server.cc
+  PRIVATE
+    connection.cc
+    server.cc
+    memory_database.cc
+    messagehandler.cc
+    newsgroup.cc
+    article.cc
 )
