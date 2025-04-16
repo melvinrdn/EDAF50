@@ -4,9 +4,9 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/include -I/Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/src -I/Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build/src
+CXX_INCLUDES = -I/Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/include
 
-CXX_FLAGSarm64 = -O2 -g -DNDEBUG -Wall -Wextra -pedantic -Wshadow -Wpointer-arith -Wcast-align -Wno-switch -std=gnu++11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
+CXX_FLAGSarm64 =  -Wall -Wextra -pedantic -Wold-style-cast -O2 -g -DNDEBUG -std=gnu++11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
 
-CXX_FLAGS = -O2 -g -DNDEBUG -Wall -Wextra -pedantic -Wshadow -Wpointer-arith -Wcast-align -Wno-switch -std=gnu++11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
+CXX_FLAGS =  -Wall -Wextra -pedantic -Wold-style-cast -O2 -g -DNDEBUG -std=gnu++11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
 

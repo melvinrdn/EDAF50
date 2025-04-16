@@ -63,13 +63,11 @@ CMAKE_BINARY_DIR = /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/buil
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/clientserver.dir/all
 all: src/all
 all: app/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/clientserver.dir/codegen
 codegen: src/codegen
 codegen: app/codegen
 .PHONY : codegen
@@ -80,7 +78,6 @@ preinstall: app/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/clientserver.dir/clean
 clean: src/clean
 clean: app/clean
 .PHONY : clean
@@ -111,11 +108,11 @@ app/clean: app/CMakeFiles/news_client.dir/clean
 # Directory level rules for directory src
 
 # Recursive "all" directory target.
-src/all:
+src/all: src/CMakeFiles/clientserver.dir/all
 .PHONY : src/all
 
 # Recursive "codegen" directory target.
-src/codegen:
+src/codegen: src/CMakeFiles/clientserver.dir/codegen
 .PHONY : src/codegen
 
 # Recursive "preinstall" directory target.
@@ -123,46 +120,46 @@ src/preinstall:
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
-src/clean:
+src/clean: src/CMakeFiles/clientserver.dir/clean
 .PHONY : src/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/clientserver.dir
+# Target rules for target src/CMakeFiles/clientserver.dir
 
 # All Build rule for target.
-CMakeFiles/clientserver.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clientserver.dir/build.make CMakeFiles/clientserver.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clientserver.dir/build.make CMakeFiles/clientserver.dir/build
+src/CMakeFiles/clientserver.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target clientserver"
-.PHONY : CMakeFiles/clientserver.dir/all
+.PHONY : src/CMakeFiles/clientserver.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/clientserver.dir/rule: cmake_check_build_system
+src/CMakeFiles/clientserver.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build/CMakeFiles 7
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/clientserver.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/clientserver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build/CMakeFiles 0
-.PHONY : CMakeFiles/clientserver.dir/rule
+.PHONY : src/CMakeFiles/clientserver.dir/rule
 
 # Convenience name for target.
-clientserver: CMakeFiles/clientserver.dir/rule
+clientserver: src/CMakeFiles/clientserver.dir/rule
 .PHONY : clientserver
 
 # codegen rule for target.
-CMakeFiles/clientserver.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clientserver.dir/build.make CMakeFiles/clientserver.dir/codegen
+src/CMakeFiles/clientserver.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/codegen
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Finished codegen for target clientserver"
-.PHONY : CMakeFiles/clientserver.dir/codegen
+.PHONY : src/CMakeFiles/clientserver.dir/codegen
 
 # clean rule for target.
-CMakeFiles/clientserver.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clientserver.dir/build.make CMakeFiles/clientserver.dir/clean
-.PHONY : CMakeFiles/clientserver.dir/clean
+src/CMakeFiles/clientserver.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/clean
+.PHONY : src/CMakeFiles/clientserver.dir/clean
 
 #=============================================================================
 # Target rules for target app/CMakeFiles/news_server.dir
 
 # All Build rule for target.
-app/CMakeFiles/news_server.dir/all: CMakeFiles/clientserver.dir/all
+app/CMakeFiles/news_server.dir/all: src/CMakeFiles/clientserver.dir/all
 	$(MAKE) $(MAKESILENT) -f app/CMakeFiles/news_server.dir/build.make app/CMakeFiles/news_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f app/CMakeFiles/news_server.dir/build.make app/CMakeFiles/news_server.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build/CMakeFiles --progress-num=10,11 "Built target news_server"
@@ -194,7 +191,7 @@ app/CMakeFiles/news_server.dir/clean:
 # Target rules for target app/CMakeFiles/news_client.dir
 
 # All Build rule for target.
-app/CMakeFiles/news_client.dir/all: CMakeFiles/clientserver.dir/all
+app/CMakeFiles/news_client.dir/all: src/CMakeFiles/clientserver.dir/all
 	$(MAKE) $(MAKESILENT) -f app/CMakeFiles/news_client.dir/build.make app/CMakeFiles/news_client.dir/depend
 	$(MAKE) $(MAKESILENT) -f app/CMakeFiles/news_client.dir/build.make app/CMakeFiles/news_client.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build/CMakeFiles --progress-num=8,9 "Built target news_client"

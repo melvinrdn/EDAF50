@@ -1,10 +1,10 @@
-cmake_minimum_required(VERSION 3.14)
-target_sources(clientserver
-  PRIVATE
+add_library(clientserver
+    article.cc
     connection.cc
-    server.cc
     memory_database.cc
     messagehandler.cc
     newsgroup.cc
-    article.cc
+    server.cc
 )
+
+target_include_directories(clientserver PUBLIC ${PROJECT_SOURCE_DIR}/include)

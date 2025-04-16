@@ -95,7 +95,7 @@ news_server_EXTERNAL_OBJECTS =
 
 app/news_server: app/CMakeFiles/news_server.dir/news_server.cc.o
 app/news_server: app/CMakeFiles/news_server.dir/build.make
-app/news_server: libclientserver.a
+app/news_server: src/libclientserver.a
 app/news_server: app/CMakeFiles/news_server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable news_server"
 	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build/app && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/news_server.dir/link.txt --verbose=$(VERBOSE)

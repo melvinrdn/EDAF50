@@ -85,51 +85,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/opt/homebrew/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/opt/homebrew/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build/CMakeFiles /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build/src//CMakeFiles/progress.marks
@@ -161,6 +116,164 @@ depend:
 	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+src/CMakeFiles/clientserver.dir/rule:
+	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/clientserver.dir/rule
+.PHONY : src/CMakeFiles/clientserver.dir/rule
+
+# Convenience name for target.
+clientserver: src/CMakeFiles/clientserver.dir/rule
+.PHONY : clientserver
+
+# fast build rule for target.
+clientserver/fast:
+	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/build
+.PHONY : clientserver/fast
+
+article.o: article.cc.o
+.PHONY : article.o
+
+# target to build an object file
+article.cc.o:
+	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/article.cc.o
+.PHONY : article.cc.o
+
+article.i: article.cc.i
+.PHONY : article.i
+
+# target to preprocess a source file
+article.cc.i:
+	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/article.cc.i
+.PHONY : article.cc.i
+
+article.s: article.cc.s
+.PHONY : article.s
+
+# target to generate assembly for a file
+article.cc.s:
+	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/article.cc.s
+.PHONY : article.cc.s
+
+connection.o: connection.cc.o
+.PHONY : connection.o
+
+# target to build an object file
+connection.cc.o:
+	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/connection.cc.o
+.PHONY : connection.cc.o
+
+connection.i: connection.cc.i
+.PHONY : connection.i
+
+# target to preprocess a source file
+connection.cc.i:
+	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/connection.cc.i
+.PHONY : connection.cc.i
+
+connection.s: connection.cc.s
+.PHONY : connection.s
+
+# target to generate assembly for a file
+connection.cc.s:
+	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/connection.cc.s
+.PHONY : connection.cc.s
+
+memory_database.o: memory_database.cc.o
+.PHONY : memory_database.o
+
+# target to build an object file
+memory_database.cc.o:
+	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/memory_database.cc.o
+.PHONY : memory_database.cc.o
+
+memory_database.i: memory_database.cc.i
+.PHONY : memory_database.i
+
+# target to preprocess a source file
+memory_database.cc.i:
+	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/memory_database.cc.i
+.PHONY : memory_database.cc.i
+
+memory_database.s: memory_database.cc.s
+.PHONY : memory_database.s
+
+# target to generate assembly for a file
+memory_database.cc.s:
+	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/memory_database.cc.s
+.PHONY : memory_database.cc.s
+
+messagehandler.o: messagehandler.cc.o
+.PHONY : messagehandler.o
+
+# target to build an object file
+messagehandler.cc.o:
+	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/messagehandler.cc.o
+.PHONY : messagehandler.cc.o
+
+messagehandler.i: messagehandler.cc.i
+.PHONY : messagehandler.i
+
+# target to preprocess a source file
+messagehandler.cc.i:
+	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/messagehandler.cc.i
+.PHONY : messagehandler.cc.i
+
+messagehandler.s: messagehandler.cc.s
+.PHONY : messagehandler.s
+
+# target to generate assembly for a file
+messagehandler.cc.s:
+	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/messagehandler.cc.s
+.PHONY : messagehandler.cc.s
+
+newsgroup.o: newsgroup.cc.o
+.PHONY : newsgroup.o
+
+# target to build an object file
+newsgroup.cc.o:
+	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/newsgroup.cc.o
+.PHONY : newsgroup.cc.o
+
+newsgroup.i: newsgroup.cc.i
+.PHONY : newsgroup.i
+
+# target to preprocess a source file
+newsgroup.cc.i:
+	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/newsgroup.cc.i
+.PHONY : newsgroup.cc.i
+
+newsgroup.s: newsgroup.cc.s
+.PHONY : newsgroup.s
+
+# target to generate assembly for a file
+newsgroup.cc.s:
+	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/newsgroup.cc.s
+.PHONY : newsgroup.cc.s
+
+server.o: server.cc.o
+.PHONY : server.o
+
+# target to build an object file
+server.cc.o:
+	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/server.cc.o
+.PHONY : server.cc.o
+
+server.i: server.cc.i
+.PHONY : server.i
+
+# target to preprocess a source file
+server.cc.i:
+	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/server.cc.i
+.PHONY : server.cc.i
+
+server.s: server.cc.s
+.PHONY : server.s
+
+# target to generate assembly for a file
+server.cc.s:
+	cd /Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/clientserver.dir/build.make src/CMakeFiles/clientserver.dir/server.cc.s
+.PHONY : server.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -168,11 +281,26 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... clientserver"
+	@echo "... article.o"
+	@echo "... article.i"
+	@echo "... article.s"
+	@echo "... connection.o"
+	@echo "... connection.i"
+	@echo "... connection.s"
+	@echo "... memory_database.o"
+	@echo "... memory_database.i"
+	@echo "... memory_database.s"
+	@echo "... messagehandler.o"
+	@echo "... messagehandler.i"
+	@echo "... messagehandler.s"
+	@echo "... newsgroup.o"
+	@echo "... newsgroup.i"
+	@echo "... newsgroup.s"
+	@echo "... server.o"
+	@echo "... server.i"
+	@echo "... server.s"
 .PHONY : help
 
 

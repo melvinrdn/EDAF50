@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libclientserver.a CMakeFiles/clientserver.dir/article.cc.o CMakeFiles/clientserver.dir/connection.cc.o CMakeFiles/clientserver.dir/memory_database.cc.o CMakeFiles/clientserver.dir/messagehandler.cc.o CMakeFiles/clientserver.dir/newsgroup.cc.o CMakeFiles/clientserver.dir/server.cc.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libclientserver.a
