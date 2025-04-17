@@ -188,7 +188,7 @@ int main(int argc, char* argv[]) {
             cout << "New client connected" << endl;
         } else {
             try {
-                handleClient(conn, *db);  // Pass Database& not MemoryDatabase&
+                handleClient(conn, *db);
             } catch (ConnectionClosedException&) {
                 server.deregisterConnection(conn);
                 cout << "Client disconnected" << endl;
