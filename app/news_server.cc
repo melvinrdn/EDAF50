@@ -3,7 +3,7 @@
 #include "connectionclosedexception.h"
 #include "messagehandler.h"
 #include "protocol.h"
-#include "memory_database.h"
+#include "database_interface.h"
 
 #include <iostream>
 #include <memory>
@@ -11,7 +11,7 @@
 
 using namespace std;
 
-void handleClient(shared_ptr<Connection> conn, MemoryDatabase& db) {
+void handleClient(shared_ptr<Connection> conn, Database& db) {
     MessageHandler mh(*conn);
 
     try {
@@ -160,22 +160,24 @@ void handleClient(shared_ptr<Connection> conn, MemoryDatabase& db) {
 }
 
 int main(int argc, char* argv[]) {
-    if (argc != 2) {
-        cerr << "Usage: ./news_server <port>" << endl;
+    if (argc < 2 || argc > 3) {
+        cerr << "Usage: ./news_server <port> [--disk]" << endl;
         return 1;
     }
 
     int port = stoi(argv[1]);
-    Server server(port);
+    DatabaseMode mode = (argc == 3 && string(argv[2]) == "--disk") ? DatabaseMode::DISK : DatabaseMode::MEMORY;
 
+    Server server(port);
     if (!server.isReady()) {
         cerr << "Server failed to start." << endl;
         return 2;
     }
 
-    MemoryDatabase db;
+    auto db = createDatabase(mode);
 
-    cout << "Server running on port " << port << endl;
+    cout << "Server running on port " << port
+         << " using " << (mode == DatabaseMode::DISK ? "DiskDatabase" : "MemoryDatabase") << endl;
 
     while (true) {
         auto conn = server.waitForActivity();
@@ -186,7 +188,7 @@ int main(int argc, char* argv[]) {
             cout << "New client connected" << endl;
         } else {
             try {
-                handleClient(conn, db);
+                handleClient(conn, *db);  // Pass Database& not MemoryDatabase&
             } catch (ConnectionClosedException&) {
                 server.deregisterConnection(conn);
                 cout << "Client disconnected" << endl;
