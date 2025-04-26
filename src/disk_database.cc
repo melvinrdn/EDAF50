@@ -136,11 +136,16 @@ DiskDatabase::getArticle(int newsgroup_id, int article_id) const {
     }
 
     std::ifstream in(artPath);
-    std::string title, author, text, line;
+    std::string title;
+    std::string author;
+    std::string text;
+
     std::getline(in, title);
     std::getline(in, author);
-    while (std::getline(in, line)) {
-        text += line + '\n';
-    }
+
+    std::ostringstream oss;
+    oss << in.rdbuf();
+    text = oss.str();
+
     return std::make_tuple(title, author, text);
 }
