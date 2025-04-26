@@ -1,5 +1,4 @@
 add_library(clientserver
-    article.cc
     connection.cc
     memory_database.cc
     disk_database.cc
