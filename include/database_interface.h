@@ -8,8 +8,14 @@
 #include <memory>
 #include <string>
 
-enum class DatabaseMode { MEMORY, DISK };
 
+// Database storage modes
+enum class DatabaseMode {
+    MEMORY, // In-memory database (no persistence)
+    DISK    // Disk-based database for persistent storage
+};
+
+// Create a Database instance based on mode and root directory. Default is "./newsdb".
 inline std::unique_ptr<Database> createDatabase(DatabaseMode mode, const std::string& root = "./newsdb") {
     if (mode == DatabaseMode::MEMORY) {
         return std::make_unique<MemoryDatabase>();
