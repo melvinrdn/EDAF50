@@ -5,21 +5,28 @@
 #include "protocol.h"
 #include <string>
 
+// Handles low-level protocol I/O over a Connection
 class MessageHandler {
 public:
+    // Initialize with an open Connection reference
     explicit MessageHandler(Connection& conn);
 
-    Protocol readCommand();         
-    int readNumber();               
-    std::string readString();       
+    // Read a single command or status byte
+    Protocol readCommand();
+    // Read a numeric parameter (PAR_NUM)
+    int readNumber();
+    // Read a string parameter (PAR_STRING)
+    std::string readString();
 
-
-    void writeCommand(Protocol cmd);   
-    void writeNumber(int number);      
-    void writeString(const std::string& str); 
+    // Write a command or status byte
+    void writeCommand(Protocol cmd);
+    // Write a numeric parameter (with PAR_NUM header)
+    void writeNumber(int number);
+    // Write a string parameter (with PAR_STRING header)
+    void writeString(const std::string& str);
 
 private:
-    Connection& conn_;
+    Connection& conn_; // Underlying socket connection
 };
 
-#endif 
+#endif

@@ -1,9 +1,0 @@
-/Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build/CMakeFiles/edit_cache.dir
-/Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build/CMakeFiles/rebuild_cache.dir
-/Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build/src/CMakeFiles/clientserver.dir
-/Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build/src/CMakeFiles/edit_cache.dir
-/Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build/src/CMakeFiles/rebuild_cache.dir
-/Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build/app/CMakeFiles/news_server.dir
-/Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build/app/CMakeFiles/news_client.dir
-/Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build/app/CMakeFiles/edit_cache.dir
-/Users/mohamedalbakkour/Documents/C++/project/git/EDAF50/build/app/CMakeFiles/rebuild_cache.dir

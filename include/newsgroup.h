@@ -2,39 +2,42 @@
 #define NEWSGROUP_H
 
 #include <string>
-#include <vector> // Good because it maintains the chronological order of articles
+#include <vector>
 #include "article.h"
 
+// Represents a collection of articles under a named group
 class Newsgroup {
 public:
-//test porpose
+    // Default for testing purposes
     Newsgroup() = default;
-// Constructor
+    // Construct a newsgroup with ID and title
     Newsgroup(int newsgroupId, const std::string &newsgroupTitle);
 
-
-    // Getters
+    // Get the unique newsgroup ID
     int getNewsgroupId() const;
+    // Get the newsgroup title
     const std::string& getNewsgroupTitle() const;
 
-    // Adds a new article to the newsgroup and returns the assigned article ID.
-    int addArticle(const std::string &articleTitle, const std::string &articleAuthor, const std::string &articleText);
+    // Add an article; returns the assigned article ID
+    int addArticle(const std::string &articleTitle,
+                   const std::string &articleAuthor,
+                   const std::string &articleText);
 
-    // Deletes an article by its article ID. Returns true if deletion was successful.
+    // Delete an article by ID; returns true if found and removed
     bool deleteArticle(int articleId);
 
-    // Returns a constant reference to the list of articles.
+    // Access the list of articles (chronological order)
     const std::vector<Article>& getArticles() const;
 
-    // Retrieves a pointer to an article by its article ID, or nullptr if not found.
+    // Retrieve an article by ID (nullptr if not found)
     Article* getArticle(int articleId);
     const Article* getArticle(int articleId) const;
 
 private:
-    int newsgroupId_;                          // Unique ID of the newsgroup.
-    std::string newsgroupTitle_;               // Title of the newsgroup.
-    std::vector<Article> articleList_;         // Collection of articles in this newsgroup.
-    int nextArticleId_;                        // Next available article ID.
+    int newsgroupId_;                // Unique ID of the newsgroup
+    std::string newsgroupTitle_;     // Title of the newsgroup
+    std::vector<Article> articleList_; // Articles in this group
+    int nextArticleId_;              // Next article ID to assign
 };
 
-#endif // NEWSGROUP_H
+#endif
