@@ -36,3 +36,12 @@ make clean
 ```bash
 ./news_client <host> <port>
 ```
+
+## Testing
+
+Run the provided Java test suites to verify protocol compliance:
+
+```bash
+java -jar TestServer1.jar <host> <port>
+java -jar TestServer2.jar <host> <port>
+```
