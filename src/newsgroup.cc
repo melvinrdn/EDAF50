@@ -1,4 +1,4 @@
-#include "../include/newsgroup.h"
+#include "newsgroup.h"
 
 
 // Constructor
